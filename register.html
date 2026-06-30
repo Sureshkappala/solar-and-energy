@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register an account with Aethera Energy. Begin tracking your clean utility savings.">
+    <title>Aethera | Create Account</title>
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <link rel="stylesheet" href="css/pages.css?v=1.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background-color: var(--bg-primary);">
+
+    <div class="auth-page">
+        <!-- Back Link -->
+        <a href="index.html" class="auth-back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </a>
+
+        <div class="auth-card glass-card">
+            <div class="auth-header">
+                <img src="images/logo.svg" alt="Aethera Logo">
+                <h2>Create Account</h2>
+                <p>Register to monitor off-grid capacity offsets.</p>
+            </div>
+
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="Full Name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="Email Address">
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" required maxlength="10" placeholder="Mobile Number">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-box">
+                        <input type="password" id="password" required placeholder="Password">
+                        <i class="fa-solid fa-eye" id="togglePassword"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Select Role</label>
+                    <select id="role" required style="width: 100%; padding: 14px 18px; border-radius: var(--border-radius-sm); border: 1px solid var(--glass-border); background: var(--bg-tertiary); color: var(--text-main); outline: none; transition: border-color var(--transition-fast); cursor: pointer;">
+                        <option value="">Select Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-box">
+                        <input type="password" id="confirmPassword" required placeholder="Confirm Password">
+                        <i class="fa-solid fa-eye" id="toggleConfirm"></i>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 30px;">
+                    <label class="checkbox-group">
+                        <input type="checkbox" required id="terms">
+                        <span>I accept the <a href="#">Terms of Service</a></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; height: 50px; margin-bottom: 20px;">Create Account</button>
+            </form>
+
+            <div class="auth-footer">
+                Already have an account? <a href="login.html">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js?v=1.1"></script>
+    <script>
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
+        const togglePassword = document.getElementById("togglePassword");
+        const toggleConfirm = document.getElementById("toggleConfirm");
+        
+        // Toggle Password visibility
+        togglePassword.addEventListener("click", () => {
+            if (password.type === "password") {
+                password.type = "text";
+                togglePassword.classList.remove('fa-eye');
+                togglePassword.classList.add('fa-eye-slash');
+            } else {
+                password.type = "password";
+                togglePassword.classList.remove('fa-eye-slash');
+                togglePassword.classList.add('fa-eye');
+            }
+        });
+
+        // Toggle Confirm Password visibility
+        toggleConfirm.addEventListener("click", () => {
+            if (confirmPassword.type === "password") {
+                confirmPassword.type = "text";
+                toggleConfirm.classList.remove('fa-eye');
+                toggleConfirm.classList.add('fa-eye-slash');
+            } else {
+                confirmPassword.type = "password";
+                toggleConfirm.classList.remove('fa-eye-slash');
+                toggleConfirm.classList.add('fa-eye');
+            }
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            if (password.value !== confirmPassword.value) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            alert('Registration Successful! Redirecting to login page.');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

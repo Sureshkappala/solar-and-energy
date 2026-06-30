@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aethera Admin Services catalog management.">
+    <title>Aethera | Admin Services</title>
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <link rel="stylesheet" href="css/dashboards.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="dash-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="dash-sidebar">
+            <div class="dash-sidebar-header">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
+                    <span class="logo-text">Aethera</span>
+                </a>
+            </div>
+            <ul class="dash-menu">
+                <li class="dash-menu-item">
+                    <a href="admin-dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="admin-users.html"><i class="fa-solid fa-users"></i> Users</a>
+                </li>
+                <li class="dash-menu-item active">
+                    <a href="admin-services.html"><i class="fa-solid fa-gears"></i> Services</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="admin-projects.html"><i class="fa-solid fa-solar-panel"></i> Projects</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="admin-messages.html"><i class="fa-solid fa-envelope"></i> Messages</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="admin-settings.html"><i class="fa-solid fa-sliders"></i> Settings</a>
+                </li>
+            </ul>
+            <div class="dash-sidebar-footer">
+                <li class="dash-menu-item" style="list-style: none;">
+                    <a href="login.html" style="color: #ef4444;"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+                </li>
+            </div>
+        </aside>
+
+        <!-- MAIN LAYOUT -->
+        <div class="dash-main">
+            <!-- TOPBAR -->
+            <header class="dash-topbar">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <button class="dash-menu-trigger" aria-label="Toggle Sidebar"><i class="fa-solid fa-bars"></i></button>
+                    <div class="dash-page-title">
+                        <h2>Services Catalog Management</h2>
+                    </div>
+                </div>
+                <div class="dash-topbar-right">
+                    <div class="dash-user-profile">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Avatar">
+                        <div>
+                            <span class="dash-user-name">Dr. Elena Rostova</span>
+                            <span class="dash-user-role">System Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- INNER MAIN CONTENT -->
+            <main class="dash-content-inner" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: flex-start;">
+                <!-- Catalog List -->
+                <div class="table-card glass-card">
+                    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 24px; color: #fff;">Ecosystem Offerings</h3>
+                    <div class="dash-table-wrapper">
+                        <table class="dash-table">
+                            <thead>
+                                <tr>
+                                    <th>Service Name</th>
+                                    <th>Target Class</th>
+                                    <th>Contract Price</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Residential Solar</strong></td>
+                                    <td>Domestic</td>
+                                    <td>$0.12 / kWh</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Commercial Wind</strong></td>
+                                    <td>Enterprise</td>
+                                    <td>$0.09 / kWh</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Lithium Wall Banks</strong></td>
+                                    <td>Hybrid</td>
+                                    <td>$3,200 installation</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Smart Grid Routing</strong></td>
+                                    <td>Municipal</td>
+                                    <td>Custom Contract</td>
+                                    <td><span class="badge badge-warning">Testing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Add Form -->
+                <div class="table-card glass-card">
+                    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 24px; color: #fff;">Add Service Sizing</h3>
+                    <form id="addServiceForm" onsubmit="event.preventDefault(); alert('New clean energy service added!'); this.reset();">
+                        <div class="form-group">
+                            <label for="srvName">Service Offering Name</label>
+                            <input type="text" id="srvName" required placeholder="e.g. Geothermal baseload">
+                        </div>
+                        <div class="form-group">
+                            <label for="srvClass">Consumer Class</label>
+                            <select id="srvClass">
+                                <option value="domestic">Domestic Home</option>
+                                <option value="industrial">Heavy Industry</option>
+                                <option value="municipal">City Grid</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 30px;">
+                            <label for="srvPrice">Standard Pricing Unit</label>
+                            <input type="text" id="srvPrice" required placeholder="e.g. $0.11 / kWh">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; height: 50px;">Publish Service Offering <i class="fa-solid fa-cloud-arrow-up" style="margin-left: 6px;"></i></button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js?v=1.1"></script>
+    <script src="js/dashboards.js"></script>
+</body>
+</html>

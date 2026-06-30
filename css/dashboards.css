@@ -1,0 +1,340 @@
+/* ==========================================================================
+   DASHBOARD CORE STRUCTURE
+   ========================================================================== */
+.dash-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+/* Sidebar Layout */
+.dash-sidebar {
+    width: 260px;
+    height: 100vh;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--glass-border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    transition: transform var(--transition-normal);
+}
+
+.dash-sidebar-header {
+    padding: 24px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.dash-menu {
+    list-style: none;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.dash-menu-item a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    border-radius: var(--border-radius-sm);
+    color: var(--text-desc);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.dash-menu-item a:hover,
+.dash-menu-item.active a {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--accent-emerald);
+}
+
+.dash-sidebar-footer {
+    padding: 24px 16px;
+    border-top: 1px solid var(--glass-border);
+}
+
+/* Dashboard Content Area */
+.dash-main {
+    flex: 1;
+    margin-left: 260px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+/* Topbar Header */
+.dash-topbar {
+    height: 70px;
+    border-bottom: 1px solid var(--glass-border);
+    background: rgba(7, 10, 19, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+.dash-page-title h2 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.dash-topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.dash-user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dash-user-profile img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid var(--accent-emerald);
+}
+
+.dash-user-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.dash-user-role {
+    font-size: 11px;
+    color: var(--text-muted);
+    display: block;
+}
+
+.dash-menu-trigger {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* ==========================================================================
+   DASHBOARD CARD LAYOUTS
+   ========================================================================== */
+.dash-content-inner {
+    padding: 40px;
+}
+
+.dash-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.metric-card {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.metric-card-info h3 {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.metric-card-val {
+    font-size: 26px;
+    font-weight: 800;
+    color: white;
+}
+
+.metric-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.metric-emerald {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--accent-emerald);
+}
+
+.metric-cyan {
+    background: rgba(6, 182, 212, 0.1);
+    color: var(--accent-cyan);
+}
+
+.metric-gold {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--accent-gold);
+}
+
+/* ==========================================================================
+   TABLE DESIGN & CONTROL WIDGETS
+   ========================================================================== */
+.table-card {
+    padding: 30px;
+    margin-bottom: 32px;
+}
+
+.table-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.table-card-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.table-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.search-input-wrapper {
+    position: relative;
+}
+
+.search-input-wrapper input {
+    padding: 10px 16px 10px 38px;
+    border-radius: var(--border-radius-pill);
+    border: 1px solid var(--glass-border);
+    background: var(--bg-tertiary);
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-input-wrapper i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.dash-table-wrapper {
+    overflow-x: auto;
+}
+
+.dash-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.dash-table th,
+.dash-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 14px;
+}
+
+.dash-table th {
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.dash-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badges */
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.badge-success { background: rgba(16, 185, 129, 0.1); color: var(--accent-emerald); }
+.badge-warning { background: rgba(245, 158, 11, 0.1); color: var(--accent-gold); }
+.badge-danger { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+/* ==========================================================================
+   CHARTS & MOCK REPORT GRAPHS
+   ========================================================================== */
+.dash-charts-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.chart-card {
+    padding: 30px;
+}
+
+/* ==========================================================================
+   MOBILE COLLAPSIBLE RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 991px) {
+    .dash-sidebar {
+        transform: translateX(-100%);
+    }
+
+    .dash-sidebar.active {
+        transform: translateX(0);
+    }
+
+    .dash-main {
+        margin-left: 0;
+    }
+
+    .dash-menu-trigger {
+        display: block;
+    }
+
+    .dash-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dash-charts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .dash-topbar {
+        padding: 0 20px;
+    }
+    
+    .dash-user-name {
+        display: none;
+    }
+
+    .dash-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dash-content-inner {
+        padding: 20px;
+    }
+}

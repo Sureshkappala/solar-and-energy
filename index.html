@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aethera Energy - Premium Glassmorphism Renewable Energy Website. Deploy clean energy smart grids, solar power, and wind solutions.">
+    <title>Aethera Energy | Premium Renewable Energy Systems</title>
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <link rel="stylesheet" href="css/pages.css?v=1.1">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================
+       HEADER & NAVBAR
+       ========================================== -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
+                <span class="logo-text">Aethera</span>
+            </a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li class="mobile-only">
+                        <div class="mobile-search">
+                            <input type="text" placeholder="Search solutions...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="mobile-only"><a href="login.html">Login</a></li>
+                    <li class="mobile-only"><a href="register.html">Register</a></li>
+                    <li class="mobile-only">
+                        <div class="mobile-contact">
+                            <h3>Contact Info</h3>
+                            <p>Phone</p>
+                            <a href="tel:+18005550199">+1 (800) 555-0199</a>
+                            <p>Email</p>
+                            <a href="mailto:info@aethera-energy.com">info@aethera-energy.com</a>
+                            <p>Office</p>
+                            <a href="#">Silicon Valley, CA</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+                <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none">
+                        <line x1="4" y1="6" x2="20" y2="6"></line>
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <line x1="4" y1="18" x2="20" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+    <section class="hero-sec">
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <span class="hero-badge">
+                    <i class="fa-solid fa-bolt-lightning"></i> Smart Grids, Solar, & Wind Solutions
+                </span>
+                <h1>
+                    Powering The Future
+                    <span>With Clean Energy</span>
+                </h1>
+                <p>
+                    Transition your estate, enterprise, or community to 100% renewable power. Leverage modular solar cells, offgrid turbine generators, and smart energy dashboards to minimize carbon footprint and electrical utility costs.
+                </p>
+                <div class="hero-btns">
+                    <a href="register.html" class="btn btn-primary">Start Transitioning <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="services.html" class="btn btn-secondary">Explore Savings</a>
+                </div>
+            </div>
+            <div class="hero-image-container float-animation reveal reveal-delay-2">
+                <!-- Premium vector infographic illustrating solar, wind & battery grid -->
+                <svg viewBox="0 0 500 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="glowGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#10b981" />
+                            <stop offset="100%" stop-color="#06b6d4" />
+                        </linearGradient>
+                        <filter id="neonBlur" x="-10%" y="-10%" width="120%" height="120%">
+                            <feGaussianBlur stdDeviation="6" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+                    <!-- Background Grid -->
+                    <rect x="10" y="10" width="480" height="400" rx="20" fill="rgba(12,18,32,0.6)" stroke="rgba(255,255,255,0.04)" stroke-width="2" />
+                    <!-- Solar Panels representation -->
+                    <g transform="translate(60, 240)" filter="url(#neonBlur)">
+                        <polygon points="0,60 120,60 90,120 -30,120" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2"/>
+                        <line x1="30" y1="60" x2="15" y2="120" stroke="#10b981" stroke-width="1.5" />
+                        <line x1="60" y1="60" x2="45" y2="120" stroke="#10b981" stroke-width="1.5" />
+                        <line x1="90" y1="60" x2="75" y2="120" stroke="#10b981" stroke-width="1.5" />
+                        <line x1="-10" y1="90" x2="105" y2="90" stroke="#10b981" stroke-width="1.5" />
+                    </g>
+                    <!-- Wind Turbine representation -->
+                    <g transform="translate(360, 100)" filter="url(#neonBlur)">
+                        <!-- Pole -->
+                        <line x1="0" y1="0" x2="0" y2="240" stroke="#06b6d4" stroke-width="4" stroke-linecap="round"/>
+                        <!-- Blades with animation path -->
+                        <g>
+                            <circle cx="0" cy="0" r="8" fill="#fff" />
+                            <path d="M 0,-8 L 0,-80 L 10,-80 Z" fill="rgba(6,182,212,0.7)" />
+                            <path d="M 6.9,4 L 69,45 L 61,51 Z" fill="rgba(6,182,212,0.7)" />
+                            <path d="M -6.9,4 L -69,45 L -61,51 Z" fill="rgba(6,182,212,0.7)" />
+                            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite" />
+                        </g>
+                    </g>
+                    <!-- Battery storage indicator -->
+                    <g transform="translate(240, 310)" filter="url(#neonBlur)">
+                        <rect x="-30" y="0" width="60" height="90" rx="10" fill="rgba(12,18,32,0.8)" stroke="#f59e0b" stroke-width="2" />
+                        <rect x="-20" y="70" width="40" height="12" rx="4" fill="#10b981" />
+                        <rect x="-20" y="52" width="40" height="12" rx="4" fill="#10b981" />
+                        <rect x="-20" y="34" width="40" height="12" rx="4" fill="#10b981" />
+                        <rect x="-20" y="16" width="40" height="12" rx="4" fill="#f59e0b" />
+                        <!-- Lightning bolt -->
+                        <path d="M -5,45 L 3,37 L -1,37 L 5,27 L -3,35 L 1,35 Z" fill="#fff" />
+                    </g>
+                    <!-- Flow Network lines -->
+                    <path d="M 120,320 H 210 M 360,260 V 320 H 270 M 240,310 V 220" stroke="url(#glowGrad)" stroke-width="2" stroke-dasharray="8 6" filter="url(#neonBlur)">
+                        <animate attributeName="stroke-dashoffset" values="100;0" dur="4s" repeatCount="indefinite" />
+                    </path>
+                    <!-- Dashboard widget illustration -->
+                    <g transform="translate(50, 40)" filter="url(#neonBlur)">
+                        <rect width="180" height="100" rx="12" fill="rgba(18,27,48,0.85)" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
+                        <text x="20" y="30" fill="#94a3b8" font-size="12" font-weight="700">CURRENT GENERATION</text>
+                        <text x="20" y="65" fill="#10b981" font-size="28" font-weight="800">48.2 <tspan font-size="16">MW</tspan></text>
+                        <!-- Spark line -->
+                        <path d="M 20,80 Q 40,75 60,85 T 100,70 T 140,82 T 160,65" stroke="#10b981" stroke-width="2" fill="none" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       STATISTICS SECTION
+       ========================================== -->
+    <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card glass-card reveal">
+                    <div class="stat-number" data-target="720" data-suffix=" MW">+0</div>
+                    <div class="stat-label">Generation Capacity</div>
+                </div>
+                <div class="stat-card glass-card reveal reveal-delay-1">
+                    <div class="stat-number" data-target="98" data-suffix="%">+0</div>
+                    <div class="stat-label">Grid Efficiency</div>
+                </div>
+                <div class="stat-card glass-card reveal reveal-delay-2">
+                    <div class="stat-number" data-target="320" data-suffix="k">0</div>
+                    <div class="stat-label">Tons CO2 Offset</div>
+                </div>
+                <div class="stat-card glass-card reveal reveal-delay-3">
+                    <div class="stat-number" data-target="15" data-suffix="+">0</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       SOLUTIONS SECTION (INTEGRATED ON HOME PAGE)
+       ========================================== -->
+    <section id="solutions" class="section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <span>Renewable Portfolio</span>
+                <h2>Technical Infrastructure Solutions</h2>
+                <p>Deploying cutting-edge hardware and advanced routing telemetry to power communities and industrial zones.</p>
+            </div>
+
+            <div class="solutions-grid">
+                <!-- Solar Grid -->
+                <div class="solution-card glass-card reveal">
+                    <span class="sol-badge">Solar Power</span>
+                    <h3 style="color: #fff;"><i class="fa-solid fa-solar-panel" style="color: var(--accent-gold); margin-right: 8px;"></i> Solar Generation</h3>
+                    <p style="color: var(--text-desc); font-size: 15px; margin-bottom: 20px;">Utilizing mono-crystalline silicon solar panels to convert photons into stable DC electricity with high efficiency rates.</p>
+                    <ul class="sol-details">
+                        <li><i class="fa-solid fa-check"></i> Efficiency: 22.4%</li>
+                        <li><i class="fa-solid fa-check"></i> Modular roof/ground systems</li>
+                        <li><i class="fa-solid fa-check"></i> Automated cooling systems</li>
+                    </ul>
+                </div>
+
+                <!-- Wind Power -->
+                <div class="solution-card glass-card reveal reveal-delay-1">
+                    <span class="sol-badge" style="background: rgba(6, 182, 212, 0.1); color: var(--accent-cyan);">Atmospheric Wind</span>
+                    <h3 style="color: #fff;"><i class="fa-solid fa-wind" style="color: var(--accent-cyan); margin-right: 8px;"></i> Wind Turbines</h3>
+                    <p style="color: var(--text-desc); font-size: 15px; margin-bottom: 20px;">Capturing kinetic wind patterns using high-altitude, variable-pitch blades connected to brushless induction generators.</p>
+                    <ul class="sol-details">
+                        <li><i class="fa-solid fa-check"></i> Rated Capacity: 2.5 - 5.0 MW</li>
+                        <li><i class="fa-solid fa-check"></i> Smart blade pitch tuning</li>
+                        <li><i class="fa-solid fa-check"></i> Low vibration gearboxes</li>
+                    </ul>
+                </div>
+
+                <!-- Energy Storage -->
+                <div class="solution-card glass-card reveal reveal-delay-2">
+                    <span class="sol-badge" style="background: rgba(245, 158, 11, 0.1); color: var(--accent-gold);">Grid Storage</span>
+                    <h3 style="color: #fff;"><i class="fa-solid fa-battery-three-quarters" style="color: var(--accent-emerald); margin-right: 8px;"></i> Battery Systems</h3>
+                    <p style="color: var(--text-desc); font-size: 15px; margin-bottom: 20px;">High-capacity Lithium Iron Phosphate (LiFePO4) storage banks stabilizing grid load during hours of peak usage.</p>
+                    <ul class="sol-details">
+                        <li><i class="fa-solid fa-check"></i> Cycle Lifespan: 6,000+</li>
+                        <li><i class="fa-solid fa-check"></i> Real-time thermal scans</li>
+                        <li><i class="fa-solid fa-check"></i> Sub-second grid injection</li>
+                    </ul>
+                </div>
+
+                <!-- Smart Transmission Grid -->
+                <div class="solution-card glass-card reveal">
+                    <span class="sol-badge">Smart Grid</span>
+                    <h3 style="color: #fff;"><i class="fa-solid fa-network-wired" style="color: var(--accent-emerald); margin-right: 8px;"></i> Microgrid Routing</h3>
+                    <p style="color: var(--text-desc); font-size: 15px; margin-bottom: 20px;">An intelligent software mesh balancing electricity generation and consumption loads dynamically using machine learning models.</p>
+                    <ul class="sol-details">
+                        <li><i class="fa-solid fa-check"></i> Automated failure routing</li>
+                        <li><i class="fa-solid fa-check"></i> Real-time pricing node updates</li>
+                        <li><i class="fa-solid fa-check"></i> Low transmission line loss</li>
+                    </ul>
+                </div>
+
+                <!-- Bioenergy solutions -->
+                <div class="solution-card glass-card reveal reveal-delay-1">
+                    <span class="sol-badge" style="background: rgba(6, 182, 212, 0.1); color: var(--accent-cyan);">Organic Resource</span>
+                    <h3 style="color: #fff;"><i class="fa-solid fa-tree" style="color: var(--accent-emerald); margin-right: 8px;"></i> Biomass Generation</h3>
+                    <p style="color: var(--text-desc); font-size: 15px; margin-bottom: 20px;">Converting organic agricultural waste into clean methane gas through anaerobic digestion, powering thermal turbine engines.</p>
+                    <ul class="sol-details">
+                        <li><i class="fa-solid fa-check"></i> Zero landfill waste</li>
+                        <li><i class="fa-solid fa-check"></i> Stable baseload capacity</li>
+                        <li><i class="fa-solid fa-check"></i> Carbon neutral emissions</li>
+                    </ul>
+                </div>
+
+                <!-- Geothermal power -->
+                <div class="solution-card glass-card reveal reveal-delay-2">
+                    <span class="sol-badge" style="background: rgba(245, 158, 11, 0.1); color: var(--accent-gold);">Geothermal</span>
+                    <h3 style="color: #fff;"><i class="fa-solid fa-temperature-arrow-up" style="color: #f59e0b; margin-right: 8px;"></i> Geothermal Systems</h3>
+                    <p style="color: var(--text-desc); font-size: 15px; margin-bottom: 20px;">Tapping deep thermal reservoirs to draw steam, driving electrical generator units without any seasonal disruptions.</p>
+                    <ul class="sol-details">
+                        <li><i class="fa-solid fa-check"></i> 24/7 continuous baseload</li>
+                        <li><i class="fa-solid fa-check"></i> Compact surface footprint</li>
+                        <li><i class="fa-solid fa-check"></i> Extreme climate resistance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       WHY CHOOSE US SECTION (INTEGRATED ON HOME PAGE)
+       ========================================== -->
+    <section id="why-choose-us" class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <div class="container">
+            <div class="section-title reveal">
+                <span>Value Proposition</span>
+                <h2>Why Choose Aethera Grid</h2>
+                <p>We combine commercial-grade hardware efficiency with decentralized routing node software to guarantee grid resilience.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="feature-card glass-card reveal">
+                    <div class="feature-icon-circle"><i class="fa-solid fa-gauge-high"></i></div>
+                    <h3>Peak Efficiency</h3>
+                    <p style="color: var(--text-desc); font-size: 15px;">Smart inverters and tracking arrays maximize yield by keeping photovoltaic panels aligned with sunlight trajectories.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="feature-card glass-card reveal reveal-delay-1">
+                    <div class="feature-icon-circle" style="background: var(--accent-cyan-gradient);"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Storm Resiliency</h3>
+                    <p style="color: var(--text-desc); font-size: 15px;">Battery cells inject power back into home/office circuits within 8 milliseconds of a grid failure, ensuring no network drop.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="feature-card glass-card reveal reveal-delay-2">
+                    <div class="feature-icon-circle" style="background: var(--accent-solar-gradient);"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Zero Emission Sourcing</h3>
+                    <p style="color: var(--text-desc); font-size: 15px;">Every kilowatt-hour flowing through Aethera routers is sourced entirely from solar, atmospheric wind, or geothermal units.</p>
+                </div>
+            </div>
+
+            <!-- COMPARISON TABLE -->
+            <div class="table-wrapper reveal">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Ecosystem Feature</th>
+                            <th style="color: var(--accent-emerald);">Aethera Microgrid</th>
+                            <th>Legacy Power Grid</th>
+                            <th>Typical Fuel Gen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Carbon Emissions</strong></td>
+                            <td><span style="color: var(--accent-emerald); font-weight:600;">0% (Zero Carbon)</span></td>
+                            <td>High (Coal/Gas burn)</td>
+                            <td>Moderate (Diesel burn)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Blackout Auto-recovery</strong></td>
+                            <td><i class="fa-solid fa-circle-check"></i> <span style="font-size: 13px; color: var(--text-desc);">(&lt; 8ms recovery)</span></td>
+                            <td><i class="fa-solid fa-circle-xmark"></i> <span style="font-size: 13px; color: var(--text-desc);">(Hours/Days)</span></td>
+                            <td><i class="fa-solid fa-circle-check"></i> <span style="font-size: 13px; color: var(--text-desc);">(30s generator warm)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fixed Monthly Cost</strong></td>
+                            <td><i class="fa-solid fa-circle-check"></i> <span style="font-size: 13px; color: var(--text-desc);">(Lock-in contracts)</span></td>
+                            <td><i class="fa-solid fa-circle-xmark"></i> <span style="font-size: 13px; color: var(--text-desc);">(Variable utility rates)</span></td>
+                            <td><i class="fa-solid fa-circle-xmark"></i> <span style="font-size: 13px; color: var(--text-desc);">(Fluctuating fuel prices)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Asset Telemetry Analytics</strong></td>
+                            <td><i class="fa-solid fa-circle-check"></i> <span style="font-size: 13px; color: var(--text-desc);">(Dashboard analytics)</span></td>
+                            <td><i class="fa-solid fa-circle-xmark"></i> <span style="font-size: 13px; color: var(--text-desc);">(Analog meter reads)</span></td>
+                            <td><i class="fa-solid fa-circle-xmark"></i> <span style="font-size: 13px; color: var(--text-desc);">(No telemetry)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       PROJECTS SECTION (INTEGRATED ON HOME PAGE)
+       ========================================== -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <span>Deployments Registry</span>
+                <h2>Completed Projects Showcase</h2>
+                <p>Explore real-world implementations of Aethera's clean energy grid networks across residential, industrial, and urban sectors.</p>
+            </div>
+
+            <!-- Categories Filter -->
+            <div class="portfolio-filters reveal">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="solar">Solar Arrays</button>
+                <button class="filter-btn" data-filter="wind">Wind Farms</button>
+                <button class="filter-btn" data-filter="grid">Microgrid / Storage</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="portfolio-grid">
+                <!-- Project 1 (Solar) -->
+                <div class="project-card glass-card reveal" data-category="solar">
+                    <img src="images/solar-panel.webp" alt="Solar Installation">
+                    <div class="project-overlay">
+                        <span class="project-category">Solar Energy</span>
+                        <h3 class="project-title">Desert Bloom Arrays</h3>
+                        <p class="project-desc">A 45MW tracking solar utility array installed across Nevada deserts to power metropolitan zones.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Wind) -->
+                <div class="project-card glass-card reveal reveal-delay-1" data-category="wind">
+                    <img src="images/wind-turbine.webp" alt="Wind Turbines">
+                    <div class="project-overlay">
+                        <span class="project-category">Wind Power</span>
+                        <h3 class="project-title">Northern Breezes Farm</h3>
+                        <p class="project-desc">Coastal turbine clusters in the North Sea generating constant baseline electricity for logistics hubs.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 (Grid) -->
+                <div class="project-card glass-card reveal reveal-delay-2" data-category="grid">
+                    <img src="images/battery-storage.webp" alt="Battery Storage Grid">
+                    <div class="project-overlay">
+                        <span class="project-category">Microgrid / Storage</span>
+                        <h3 class="project-title">Industrial Buffer Station</h3>
+                        <p class="project-desc">A 20MWh lithium storage station storing off-peak energy to cushion heavy factory loads during peak hours.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 (Solar & About Company hybrid representation) -->
+                <div class="project-card glass-card reveal" data-category="solar">
+                    <img src="images/about-company.webp" alt="Company solar grid">
+                    <div class="project-overlay">
+                        <span class="project-category">Solar Energy</span>
+                        <h3 class="project-title">Silicon Roof Carport</h3>
+                        <p class="project-desc">Double-sided solar shelter canopy installed over global corporate car parking zones, charging fleets of EVs.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 (Solar / Grid hybrid) -->
+                <div class="project-card glass-card reveal reveal-delay-1" data-category="solar">
+                    <img src="images/hero.webp" alt="Urban rooftop solar">
+                    <div class="project-overlay">
+                        <span class="project-category">Solar Energy</span>
+                        <h3 class="project-title">Urban Estates Microgrid</h3>
+                        <p class="project-desc">Rooftop installations connecting 300 modern domestic homes to a singular eco energy pool.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       TESTIMONIALS SLIDER SECTION
+       ========================================== -->
+    <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--glass-border);">
+        <div class="container">
+            <div class="section-title reveal">
+                <span>Client Feedback</span>
+                <h2>Success Stories</h2>
+                <p>Hear from municipal leaders, enterprise officers, and homeowners who migrated to Aethera Grid.</p>
+            </div>
+            
+            <div class="testimonial-slider glass-card reveal">
+                <div class="slides-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Transitioning our industrial manufacturing hub to Aethera's off-grid solar-wind system reduced our electrical expenses by 42% in the first quarter alone. Their smart analytics dashboard made capacity planning simple."</p>
+                        <div class="testimonial-user">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus Vance">
+                            <div class="user-meta">
+                                <h4>Marcus Vance</h4>
+                                <span>Chief Operations Officer, Apex Corp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Our city council wanted a sustainable microgrid solution for critical municipal centers. Aethera deployed a high-capacity solar array integrated with lithium storage backups in record time."</p>
+                        <div class="testimonial-user">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova">
+                            <div class="user-meta">
+                                <h4>Dr. Elena Rostova</h4>
+                                <span>City Infrastructure Director</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <!-- Dots generated dynamically via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       CTA BANNER SECTION
+       ========================================== -->
+    <section class="section-padding" style="position: relative; overflow: hidden;">
+        <div class="container" style="max-width: 900px; text-align: center;">
+            <div class="glass-card reveal pulse-glow" style="padding: 60px 40px; border-radius: var(--border-radius-lg);">
+                <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 16px;">Transition To Clean Grid Today</h2>
+                <p style="color: var(--text-desc); font-size: 18px; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Contact our energy consultants for a tailored system sizing analysis and financial projections report.
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary">Schedule Sizing Call</a>
+                    <a href="services.html" class="btn btn-secondary">Calculate Monthly Savings</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       FOOTER
+       ========================================== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
+                    <span class="logo-text">Aethera</span>
+                </a>
+                <p>Architecting high-availability green utility networks and smart clean grids worldwide.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Follow us on YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Ecosystem</h3>
+                <ul>
+                    <li><a href="index.html#solutions">Solar Solutions</a></li>
+                    <li><a href="index.html#solutions">Wind Turbines</a></li>
+                    <li><a href="index.html#solutions">Smart Grid Networks</a></li>
+                    <li><a href="index.html#projects">Project Showcase</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Team</a></li>
+                    <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="blog.html">Latest Energy News</a></li>
+                    <li><a href="faq.html">FAQ Helpdesk</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Stay updated on renewable storage technology breakthroughs and project updates.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Newsletter!'); this.reset();">
+                    <input type="email" placeholder="Email address" required aria-label="Email address">
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Aethera Inc. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main scripts -->
+    <script src="js/main.js?v=1.1"></script>
+    <script src="js/pages.js?v=1.1"></script>
+</body>
+</html>

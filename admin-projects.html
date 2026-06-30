@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aethera Admin global projects monitoring log database.">
+    <title>Aethera | Admin Projects</title>
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <link rel="stylesheet" href="css/dashboards.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="dash-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="dash-sidebar">
+            <div class="dash-sidebar-header">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
+                    <span class="logo-text">Aethera</span>
+                </a>
+            </div>
+            <ul class="dash-menu">
+                <li class="dash-menu-item">
+                    <a href="admin-dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="admin-users.html"><i class="fa-solid fa-users"></i> Users</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="admin-services.html"><i class="fa-solid fa-gears"></i> Services</a>
+                </li>
+                <li class="dash-menu-item active">
+                    <a href="admin-projects.html"><i class="fa-solid fa-solar-panel"></i> Projects</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="admin-messages.html"><i class="fa-solid fa-envelope"></i> Messages</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="admin-settings.html"><i class="fa-solid fa-sliders"></i> Settings</a>
+                </li>
+            </ul>
+            <div class="dash-sidebar-footer">
+                <li class="dash-menu-item" style="list-style: none;">
+                    <a href="login.html" style="color: #ef4444;"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+                </li>
+            </div>
+        </aside>
+
+        <!-- MAIN LAYOUT -->
+        <div class="dash-main">
+            <!-- TOPBAR -->
+            <header class="dash-topbar">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <button class="dash-menu-trigger" aria-label="Toggle Sidebar"><i class="fa-solid fa-bars"></i></button>
+                    <div class="dash-page-title">
+                        <h2>Infrastructure Deployments Logs</h2>
+                    </div>
+                </div>
+                <div class="dash-topbar-right">
+                    <div class="dash-user-profile">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Avatar">
+                        <div>
+                            <span class="dash-user-name">Dr. Elena Rostova</span>
+                            <span class="dash-user-role">System Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- INNER MAIN CONTENT -->
+            <main class="dash-content-inner">
+                <div class="table-card glass-card">
+                    <div class="table-card-header">
+                        <h3>Global Deployments Register</h3>
+                        <button class="btn btn-primary btn-sm" onclick="alert('Creating new global project deployment configuration...')"><i class="fa-solid fa-plus"></i> Configure Project</button>
+                    </div>
+
+                    <div class="dash-table-wrapper">
+                        <table class="dash-table">
+                            <thead>
+                                <tr>
+                                    <th>Project Title</th>
+                                    <th>Capacity Capacity</th>
+                                    <th>Ecosystem Type</th>
+                                    <th>Network Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Desert Bloom Arrays</strong></td>
+                                    <td>45 MW</td>
+                                    <td>Solar Photovoltaic</td>
+                                    <td><span class="badge badge-success">Online (98.4%)</span></td>
+                                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Desert Bloom array configuration toggled.')">Toggle Status</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Northern Breezes Farm</strong></td>
+                                    <td>120 MW</td>
+                                    <td>Marine Wind</td>
+                                    <td><span class="badge badge-success">Online (72.0%)</span></td>
+                                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Northern Breezes wind configuration toggled.')">Toggle Status</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>San Jose Storage Station</strong></td>
+                                    <td>20 MWh</td>
+                                    <td>Battery Storage</td>
+                                    <td><span class="badge badge-warning">Maintenance</span></td>
+                                    <td><button class="btn btn-secondary btn-sm" onclick="alert('San Jose storage configuration toggled.')">Toggle Status</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Silicon Roof Carport</strong></td>
+                                    <td>2.4 MW</td>
+                                    <td>Solar Carport Array</td>
+                                    <td><span class="badge badge-success">Online (100%)</span></td>
+                                    <td><button class="btn btn-secondary btn-sm" onclick="alert('Silicon Roof carport configuration toggled.')">Toggle Status</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js?v=1.1"></script>
+    <script src="js/dashboards.js"></script>
+</body>
+</html>

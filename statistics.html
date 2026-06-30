@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aethera Statistics. Real-time green capacity stats, carbon offset growth chart, and grid reliability metrics.">
+    <title>Aethera Energy | Clean Grid Statistics</title>
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <link rel="stylesheet" href="css/pages.css?v=1.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
+                <span class="logo-text">Aethera</span>
+            </a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+                <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none">
+                        <line x1="4" y1="6" x2="20" y2="6"></line>
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <line x1="4" y1="18" x2="20" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATISTICS CONTENT -->
+    <section class="section-padding" style="padding-top: 150px;">
+        <div class="container">
+            <div class="section-title reveal">
+                <span>Ecosystem Live Telemetry</span>
+                <h2>Clean Grid Impact Reports</h2>
+                <p>Track live generation capacity, cumulative carbon displacement, and grid availability metrics across our connected partner network.</p>
+            </div>
+
+            <!-- Stats grid -->
+            <div class="stats-grid" style="margin-bottom: 60px;">
+                <div class="stat-card glass-card reveal">
+                    <div class="stat-number" data-target="720" data-suffix=" MW">+0</div>
+                    <div class="stat-label">Generation Capacity</div>
+                </div>
+                <div class="stat-card glass-card reveal reveal-delay-1">
+                    <div class="stat-number" data-target="98" data-suffix="%">+0</div>
+                    <div class="stat-label">Grid Efficiency</div>
+                </div>
+                <div class="stat-card glass-card reveal reveal-delay-2">
+                    <div class="stat-number" data-target="320" data-suffix="k">0</div>
+                    <div class="stat-label">Tons CO2 Offset</div>
+                </div>
+                <div class="stat-card glass-card reveal reveal-delay-3">
+                    <div class="stat-number" data-target="99" data-suffix=".99%">0</div>
+                    <div class="stat-label">System Availability</div>
+                </div>
+            </div>
+
+            <!-- SVG LINE GRAPH (Carbon displacement progression) -->
+            <div class="chart-container glass-card reveal">
+                <h3 style="font-size: 20px; font-weight: 800; text-align: center; margin-bottom: 30px; color: #fff;">Carbon Displacement Growth (Metric Tons × 1000)</h3>
+                
+                <svg class="chart-svg" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="cyanGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#06b6d4" />
+                            <stop offset="100%" stop-color="#10b981" />
+                        </linearGradient>
+                        <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25" />
+                            <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Horizontal Grid lines -->
+                    <line x1="40" y1="40" x2="470" y2="40" class="chart-grid-line" />
+                    <line x1="40" y1="80" x2="470" y2="80" class="chart-grid-line" />
+                    <line x1="40" y1="120" x2="470" y2="120" class="chart-grid-line" />
+                    <line x1="40" y1="160" x2="470" y2="160" class="chart-grid-line" />
+                    <line x1="40" y1="200" x2="470" y2="200" class="chart-grid-line" />
+
+                    <!-- Y-Axis Labels -->
+                    <text x="15" y="44" class="chart-text">400k</text>
+                    <text x="15" y="84" class="chart-text">300k</text>
+                    <text x="15" y="124" class="chart-text">200k</text>
+                    <text x="15" y="164" class="chart-text">100k</text>
+                    <text x="25" y="204" class="chart-text">0</text>
+
+                    <!-- X-Axis Labels -->
+                    <text x="45" y="222" class="chart-text">2021</text>
+                    <text x="125" y="222" class="chart-text">2022</text>
+                    <text x="205" y="222" class="chart-text">2023</text>
+                    <text x="285" y="222" class="chart-text">2024</text>
+                    <text x="365" y="222" class="chart-text">2025</text>
+                    <text x="445" y="222" class="chart-text">2026</text>
+
+                    <!-- Axis lines -->
+                    <line x1="40" y1="30" x2="40" y2="200" class="chart-axis" />
+                    <line x1="40" y1="200" x2="480" y2="200" class="chart-axis" />
+
+                    <!-- Area under path -->
+                    <path d="M 50,200 L 50,185 L 130,165 L 210,132 L 290,95 L 370,68 L 450,45 L 450,200 Z" fill="url(#areaGrad)" />
+
+                    <!-- Progression line path -->
+                    <path d="M 50,185 L 130,165 L 210,132 L 290,95 L 370,68 L 450,45" class="chart-line" />
+
+                    <!-- Plot dots -->
+                    <circle cx="50" cy="185" r="5" class="chart-dot" />
+                    <circle cx="130" cy="165" r="5" class="chart-dot" />
+                    <circle cx="210" cy="132" r="5" class="chart-dot" />
+                    <circle cx="290" cy="95" r="5" class="chart-dot" />
+                    <circle cx="370" cy="68" r="5" class="chart-dot" />
+                    <circle cx="450" cy="45" r="5" class="chart-dot" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
+                    <span class="logo-text">Aethera</span>
+                </a>
+                <p>Architecting high-availability green utility networks and smart clean grids worldwide.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Follow us on YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Ecosystem</h3>
+                <ul>
+                    <li><a href="solutions.html">Solar Solutions</a></li>
+                    <li><a href="solutions.html">Wind Turbines</a></li>
+                    <li><a href="solutions.html">Smart Grid Networks</a></li>
+                    <li><a href="projects.html">Project Showcase</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Team</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                    <li><a href="blog.html">Latest Energy News</a></li>
+                    <li><a href="faq.html">FAQ Helpdesk</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Stay updated on renewable storage technology breakthroughs and project updates.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Newsletter!'); this.reset();">
+                    <input type="email" placeholder="Email address" required aria-label="Email address">
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Aethera Inc. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=1.1"></script>
+    <script src="js/pages.js?v=1.1"></script>
+</body>
+</html>

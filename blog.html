@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aethera Green Blog. Latest technical breakthroughs in silicon solar efficiency, lithium reserves, and global carbon reduction.">
+    <title>Aethera Energy | Clean Grid Blog</title>
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <link rel="stylesheet" href="css/pages.css?v=1.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
+                <span class="logo-text">Aethera</span>
+            </a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+                <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none">
+                        <line x1="4" y1="6" x2="20" y2="6"></line>
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <line x1="4" y1="18" x2="20" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BLOG FEED -->
+    <section class="section-padding" style="padding-top: 150px;">
+        <div class="container">
+            <div class="section-title reveal">
+                <span>Green Perspectives</span>
+                <h2>Ecosystem Research & News</h2>
+                <p>Technical publications on renewable materials science, smart grid telemetry, and microgrid economic forecasts.</p>
+            </div>
+
+            <!-- Optional Search/Filter Bar -->
+            <div class="glass-card reveal" style="padding: 20px; display: flex; gap: 16px; align-items: center; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap;">
+                <div style="position: relative; flex: 1; min-width: 250px;">
+                    <input type="text" placeholder="Search publications..." style="width: 100%; padding: 12px 18px 12px 45px; border-radius: var(--border-radius-pill); border: 1px solid var(--glass-border); background: var(--bg-secondary); color: white; outline: none;">
+                    <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <select style="padding: 12px 20px; border-radius: var(--border-radius-pill); border: 1px solid var(--glass-border); background: var(--bg-secondary); color: white; outline: none; cursor: pointer;">
+                        <option value="latest">Latest First</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Post 1 -->
+                <div class="blog-card glass-card reveal">
+                    <div class="blog-image">
+                        <img src="images/solar-panel.webp" alt="Solar cells innovation">
+                        <span class="blog-tag">Solar Science</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date-read">
+                            <span>June 28, 2026</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3>Silicon Cell Efficiency Moves Past 24% Barrier</h3>
+                        <p>A deep-dive review of double-sided photovoltaic architecture utilizing modern passivated contacts to optimize low-light energy capture.</p>
+                        <div class="blog-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=80&q=80" alt="Dr. Rostova">
+                            <span>Dr. Elena Rostova</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="blog-card glass-card reveal reveal-delay-1">
+                    <div class="blog-image">
+                        <img src="images/battery-storage.webp" alt="Battery cells">
+                        <span class="blog-tag">Storage Tech</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date-read">
+                            <span>June 20, 2026</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3>Stabilizing Microgrids with Solid-State Batteries</h3>
+                        <p>Comparing the lifespan, degradation curves, and thermal profiles of solid-state storage packs versus legacy lithium-ion batteries.</p>
+                        <div class="blog-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="M. Vance">
+                            <span>Marcus Vance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="blog-card glass-card reveal reveal-delay-2">
+                    <div class="blog-image">
+                        <img src="images/wind-turbine.webp" alt="Wind farm Offshore">
+                        <span class="blog-tag">Turbines</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date-read">
+                            <span>June 15, 2026</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3>Deep-Water Floating Turbine Infrastructure</h3>
+                        <p>How engineering anchors and flexible subsea cabling are expanding off-shore wind capture into previously unviable ocean depths.</p>
+                        <div class="blog-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="C. Davis">
+                            <span>Charles Davis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
+                    <span class="logo-text">Aethera</span>
+                </a>
+                <p>Architecting high-availability green utility networks and smart clean grids worldwide.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Follow us on YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Ecosystem</h3>
+                <ul>
+                    <li><a href="index.html#solutions">Solar Solutions</a></li>
+                    <li><a href="index.html#solutions">Wind Turbines</a></li>
+                    <li><a href="index.html#solutions">Smart Grid Networks</a></li>
+                    <li><a href="index.html#projects">Project Showcase</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Team</a></li>
+                    <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="blog.html">Latest Energy News</a></li>
+                    <li><a href="faq.html">FAQ Helpdesk</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Stay updated on renewable storage technology breakthroughs and project updates.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Newsletter!'); this.reset();">
+                    <input type="email" placeholder="Email address" required aria-label="Email address">
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Aethera Inc. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=1.1"></script>
+    <script src="js/pages.js?v=1.1"></script>
+</body>
+</html>

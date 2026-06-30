@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aethera User Dashboard overview. Monitor household solar yield and grid metrics.">
+    <title>Aethera | User Dashboard</title>
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <link rel="stylesheet" href="css/dashboards.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="dash-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="dash-sidebar">
+            <div class="dash-sidebar-header">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
+                    <span class="logo-text">Aethera</span>
+                </a>
+            </div>
+            <ul class="dash-menu">
+                <li class="dash-menu-item active">
+                    <a href="user-dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="user-projects.html"><i class="fa-solid fa-solar-panel"></i> My Projects</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="user-reports.html"><i class="fa-solid fa-file-invoice"></i> Energy Reports</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="user-profile.html"><i class="fa-solid fa-user-gear"></i> Profile Settings</a>
+                </li>
+                <li class="dash-menu-item">
+                    <a href="user-support.html"><i class="fa-solid fa-circle-question"></i> Help Support</a>
+                </li>
+            </ul>
+            <div class="dash-sidebar-footer">
+                <li class="dash-menu-item" style="list-style: none;">
+                    <a href="login.html" style="color: #ef4444;"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+                </li>
+            </div>
+        </aside>
+
+        <!-- MAIN LAYOUT -->
+        <div class="dash-main">
+            <!-- TOPBAR -->
+            <header class="dash-topbar">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <button class="dash-menu-trigger" aria-label="Toggle Sidebar"><i class="fa-solid fa-bars"></i></button>
+                    <div class="dash-page-title">
+                        <h2>Telemetry Console</h2>
+                    </div>
+                </div>
+                <div class="dash-topbar-right">
+                    <div class="dash-user-profile">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Avatar">
+                        <div>
+                            <span class="dash-user-name">Charles Davis</span>
+                            <span class="dash-user-role">Premium Consumer</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- INNER MAIN CONTENT -->
+            <main class="dash-content-inner">
+                <div class="dash-metrics-grid">
+                    <!-- Metric 1 -->
+                    <div class="metric-card glass-card">
+                        <div class="metric-card-info">
+                            <h3>Current Generation</h3>
+                            <div class="metric-card-val" id="liveCapacityVal">4.2 <span style="font-size: 14px; font-weight: 500; color: var(--text-muted);">kW</span></div>
+                        </div>
+                        <div class="metric-card-icon metric-emerald"><i class="fa-solid fa-sun"></i></div>
+                    </div>
+                    <!-- Metric 2 -->
+                    <div class="metric-card glass-card">
+                        <div class="metric-card-info">
+                            <h3>Active Load Load</h3>
+                            <div class="metric-card-val" id="liveLoadVal">1.8 <span style="font-size: 14px; font-weight: 500; color: var(--text-muted);">kW</span></div>
+                        </div>
+                        <div class="metric-card-icon metric-cyan"><i class="fa-solid fa-house-laptop"></i></div>
+                    </div>
+                    <!-- Metric 3 -->
+                    <div class="metric-card glass-card">
+                        <div class="metric-card-info">
+                            <h3>Battery Battery Charge</h3>
+                            <div class="metric-card-val">87%</div>
+                        </div>
+                        <div class="metric-card-icon metric-emerald"><i class="fa-solid fa-battery-three-quarters"></i></div>
+                    </div>
+                    <!-- Metric 4 -->
+                    <div class="metric-card glass-card">
+                        <div class="metric-card-info">
+                            <h3>Monthly Savings</h3>
+                            <div class="metric-card-val">$184.20</div>
+                        </div>
+                        <div class="metric-card-icon metric-gold"><i class="fa-solid fa-wallet"></i></div>
+                    </div>
+                </div>
+
+                <div class="dash-charts-grid">
+                    <!-- Area Chart Box -->
+                    <div class="chart-card glass-card">
+                        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 24px; color: #fff;">Today's Battery Sizing Performance (kWh)</h3>
+                        <svg viewBox="0 0 500 200" style="width: 100%; height: auto;">
+                            <!-- Grid lines -->
+                            <line x1="30" y1="30" x2="480" y2="30" stroke="rgba(255,255,255,0.03)" />
+                            <line x1="30" y1="90" x2="480" y2="90" stroke="rgba(255,255,255,0.03)" />
+                            <line x1="30" y1="150" x2="480" y2="150" stroke="rgba(255,255,255,0.03)" />
+                            <!-- Curve -->
+                            <path d="M 30,150 Q 120,60 210,120 T 390,40 T 480,90" fill="none" stroke="var(--accent-emerald)" stroke-width="3" />
+                            <!-- Axis -->
+                            <line x1="30" y1="10" x2="30" y2="180" stroke="var(--glass-border)" />
+                            <line x1="30" y1="180" x2="485" y2="180" stroke="var(--glass-border)" />
+                        </svg>
+                    </div>
+
+                    <!-- Active contracts checklist -->
+                    <div class="chart-card glass-card">
+                        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 24px; color: #fff;">System Notifications</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
+                            <li style="display: flex; gap: 12px; font-size: 14px; color: var(--text-desc);">
+                                <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald); font-size: 16px; margin-top: 2px;"></i>
+                                <span>Grid system sync fully optimized. (08:24)</span>
+                            </li>
+                            <li style="display: flex; gap: 12px; font-size: 14px; color: var(--text-desc);">
+                                <i class="fa-solid fa-circle-exclamation" style="color: var(--accent-gold); font-size: 16px; margin-top: 2px;"></i>
+                                <span>Battery temperature warning: standard ranges. (14:32)</span>
+                            </li>
+                            <li style="display: flex; gap: 12px; font-size: 14px; color: var(--text-desc);">
+                                <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald); font-size: 16px; margin-top: 2px;"></i>
+                                <span>Net billing statement for June generated. (Yesterday)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js?v=1.1"></script>
+    <script src="js/dashboards.js"></script>
+</body>
+</html>
