@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollThreshold = 20;
 
     const handleScroll = () => {
+        if (!header) return;
         if (window.scrollY > scrollThreshold) {
             header.classList.add('scrolled');
         } else {
@@ -51,9 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Prevent body scroll when menu is open
         if (isOpen) {
-            document.body.style.overflow = 'hidden';
+            document.body.classList.add('menu-open');
+            document.documentElement.classList.add('menu-open');
         } else {
-            document.body.style.overflow = '';
+            document.body.classList.remove('menu-open');
+            document.documentElement.classList.remove('menu-open');
         }
     };
 
@@ -61,11 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.classList.remove('active');
         navLinksList.classList.remove('active');
         overlay.classList.remove('active');
-        document.body.style.overflow = '';
+        document.body.classList.remove('menu-open');
+        document.documentElement.classList.remove('menu-open');
     };
 
-    menuToggle.addEventListener('click', toggleMenu);
-    overlay.addEventListener('click', closeMenu);
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMenu);
+    }
+    if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+    }
 
     // Auto-close menu on drawer navlink click (for mobile layout)
     const mobileLinks = document.querySelectorAll('.nav-links a');

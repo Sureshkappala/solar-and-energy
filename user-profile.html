@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aethera User Profile settings.">
     <title>Aethera | Profile Settings</title>
-    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <link rel="stylesheet" href="css/main.css?v=2.4">
     <link rel="stylesheet" href="css/dashboards.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -15,9 +15,8 @@
         <!-- SIDEBAR -->
         <aside class="dash-sidebar">
             <div class="dash-sidebar-header">
-                <a href="index.html" class="logo-link">
-                    <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
-                    <span class="logo-text">Aethera</span>
+                <a href="user-dashboard.html" class="logo-link">
+                    <img src="images/logo.png" alt="Stackly Logo" class="logo-img">
                 </a>
             </div>
             <ul class="dash-menu">
@@ -70,7 +69,7 @@
                 <div class="table-card glass-card" style="max-width: 650px; margin: 0 auto;">
                     <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 24px; color: #fff;">Account Profile Information</h3>
                     <form id="profileForm" onsubmit="event.preventDefault(); alert('Profile details updated successfully!');">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                        <div class="form-row">
                             <div class="form-group" style="margin-bottom:0;">
                                 <label for="firstName">First Name</label>
                                 <input type="text" id="firstName" value="Charles" required>
@@ -97,7 +96,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/main.js?v=1.1"></script>
-    <script src="js/dashboards.js"></script>
+    <script src="js/main.js?v=2.4"></script>
+    <script src="js/dashboards.js?v=2.4"></script>
 </body>
 </html>

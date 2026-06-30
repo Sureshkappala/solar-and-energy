@@ -186,16 +186,46 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const contactForm = document.getElementById('contactForm');
     
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+
+    if (nameInput) {
+        nameInput.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^A-Za-z\s]/g, '');
+        });
+    }
+
+    if (phoneInput) {
+        phoneInput.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^0-9]/g, '');
+        });
+    }
+
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
             const message = document.getElementById('message').value.trim();
 
-            if (!name || !email || !message) {
+            if (!name || !email || !phone || !message) {
                 alert('Please fill out all required fields.');
+                return;
+            }
+
+            // Validation: Name only allows alphabets and spaces
+            const nameRegex = /^[A-Za-z\s]+$/;
+            if (!nameRegex.test(name)) {
+                alert('Full Name should only contain letters and spaces.');
+                return;
+            }
+
+            // Validation: Mobile Number only allows digits
+            const phoneRegex = /^\d+$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Mobile Number should only contain digits.');
                 return;
             }
 

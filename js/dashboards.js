@@ -32,14 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
             sidebar.classList.add('active');
             backdrop.style.opacity = '1';
             backdrop.style.visibility = 'visible';
-            document.body.style.overflow = 'hidden';
+            document.body.classList.add('menu-open');
+            document.documentElement.classList.add('menu-open');
         };
 
         const closeSidebar = () => {
             sidebar.classList.remove('active');
             backdrop.style.opacity = '0';
             backdrop.style.visibility = 'hidden';
-            document.body.style.overflow = '';
+            document.body.classList.remove('menu-open');
+            document.documentElement.classList.remove('menu-open');
         };
 
         menuTrigger.addEventListener('click', openSidebar);

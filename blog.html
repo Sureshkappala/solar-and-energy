@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aethera Green Blog. Latest technical breakthroughs in silicon solar efficiency, lithium reserves, and global carbon reduction.">
     <title>Aethera Energy | Clean Grid Blog</title>
-    <link rel="stylesheet" href="css/main.css?v=1.1">
-    <link rel="stylesheet" href="css/pages.css?v=1.1">
+    <link rel="stylesheet" href="css/main.css?v=2.4">
+    <link rel="stylesheet" href="css/pages.css?v=2.4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -15,16 +15,34 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo-link">
-                <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
-                <span class="logo-text">Aethera</span>
+                <img src="images/logo.png" alt="Stackly Logo" class="logo-img">
             </a>
             <nav class="navbar">
                 <ul class="nav-links">
+                    <li class="mobile-only">
+                        <div class="mobile-search">
+                            <input type="text" placeholder="Search solutions...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="blog.html" class="active">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li class="mobile-only"><a href="login.html">Login</a></li>
+                    <li class="mobile-only"><a href="register.html">Register</a></li>
+                    <li class="mobile-only">
+                        <div class="mobile-contact">
+                            <h3>Contact Info</h3>
+                            <p>Phone</p>
+                            <a href="tel:+917010782745">+91 7010782745</a>
+                            <p>Email</p>
+                            <a href="mailto:info@stackly.com">info@stackly.com</a>
+                            <p>Location</p>
+                            <a href="#">Stackly, Salem</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <div class="nav-buttons">
@@ -42,13 +60,29 @@
     </header>
 
     <!-- BLOG FEED -->
-    <section class="section-padding" style="padding-top: 150px;">
-        <div class="container">
-            <div class="section-title reveal">
-                <span>Green Perspectives</span>
-                <h2>Ecosystem Research & News</h2>
-                <p>Technical publications on renewable materials science, smart grid telemetry, and microgrid economic forecasts.</p>
+    <section class="inner-hero">
+        <div class="container inner-hero-grid">
+            <div class="inner-hero-content reveal active">
+                <div class="hero-badge"><i class="fa-solid fa-book-open" style="color: var(--accent-emerald); margin-right: 6px;"></i> Green Perspectives</div>
+                <h1>Ecosystem Research <span>& News</span></h1>
+                <p>Technical publications detailing solar cell materials science, smart grid telemetry integrations, and decentralized microgrid economic forecasts.</p>
             </div>
+            <div class="inner-hero-image float-animation reveal reveal-delay-2 active">
+                <svg viewBox="0 0 400 300" style="width: 100%; height: auto; max-width: 320px;" fill="none">
+                    <circle cx="200" cy="150" r="100" stroke="rgba(16, 185, 129, 0.15)" stroke-width="1.5"></circle>
+                    <path d="M 120,180 L 160,130 L 200,160 L 240,110 L 280,140" stroke="var(--accent-emerald)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M 120,180 L 160,130 L 200,160 L 240,110 L 280,140 L 280,210 L 120,210 Z" fill="rgba(16, 185, 129, 0.05)"></path>
+                    <line x1="100" y1="210" x2="300" y2="210" stroke="var(--glass-border)" stroke-width="2"></line>
+                    <line x1="100" y1="100" x2="100" y2="220" stroke="var(--glass-border)" stroke-width="2"></line>
+                    <rect x="310" y="110" width="8" height="100" rx="2" fill="rgba(6, 182, 212, 0.1)" stroke="var(--accent-cyan)" stroke-width="1"></rect>
+                    <rect x="310" y="150" width="8" height="60" rx="2" fill="var(--accent-cyan)"></rect>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
 
             <!-- Optional Search/Filter Bar -->
             <div class="glass-card reveal" style="padding: 20px; display: flex; gap: 16px; align-items: center; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap;">
@@ -124,6 +158,66 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Post 4 -->
+                <div class="blog-card glass-card reveal">
+                    <div class="blog-image">
+                        <img src="images/solar-panel.webp" alt="Smart grid integration">
+                        <span class="blog-tag">Grid Integration</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date-read">
+                            <span>June 10, 2026</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3>Predictive ML Models for Solar Output Deflection</h3>
+                        <p>How weather-mapping machine learning models anticipate solar grid voltage fluctuations to dynamically adjust active storage reserves.</p>
+                        <div class="blog-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=80&q=80" alt="Dr. Rostova">
+                            <span>Dr. Elena Rostova</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="blog-card glass-card reveal reveal-delay-1">
+                    <div class="blog-image">
+                        <img src="images/wind-turbine.webp" alt="Decentralized microgrids">
+                        <span class="blog-tag">Decentralization</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date-read">
+                            <span>June 05, 2026</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3>Bypassing Long-Distance Transmission Line Losses</h3>
+                        <p>An audit of average voltage dissipation in standard high-voltage grids compared to decentralized local energy networks.</p>
+                        <div class="blog-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="M. Vance">
+                            <span>Marcus Vance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="blog-card glass-card reveal reveal-delay-2">
+                    <div class="blog-image">
+                        <img src="images/battery-storage.webp" alt="Recycling solar elements">
+                        <span class="blog-tag">Ecology</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date-read">
+                            <span>May 28, 2026</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3>Sustainable Silicon: Life-Cycle PV Cell Recycling</h3>
+                        <p>Examining modern thermal decomposition methods that extract reusable silicon alloys and silver contacts from retired solar panels.</p>
+                        <div class="blog-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="C. Davis">
+                            <span>Charles Davis</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -133,14 +227,13 @@
         <div class="container footer-grid">
             <div class="footer-info">
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
-                    <span class="logo-text">Aethera</span>
+                    <img src="images/logo.png" alt="Stackly Logo" class="logo-img">
                 </a>
                 <p>Architecting high-availability green utility networks and smart clean grids worldwide.</p>
                 <div class="social-links">
-                    <a href="#" aria-label="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Follow us on YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="404.html" aria-label="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404.html" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="404.html" aria-label="Follow us on YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -180,7 +273,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=1.1"></script>
-    <script src="js/pages.js?v=1.1"></script>
+    <script src="js/main.js?v=2.4"></script>
+    <script src="js/pages.js?v=2.4"></script>
 </body>
 </html>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About Aethera Energy. Our history, goals, mission, and timeline in building clean renewable networks.">
     <title>Aethera Energy | About Us</title>
-    <link rel="stylesheet" href="css/main.css?v=1.1">
-    <link rel="stylesheet" href="css/pages.css?v=1.1">
+    <link rel="stylesheet" href="css/main.css?v=2.4">
+    <link rel="stylesheet" href="css/pages.css?v=2.4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -15,8 +15,7 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo-link">
-                <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
-                <span class="logo-text">Aethera</span>
+                <img src="images/logo.png" alt="Stackly Logo" class="logo-img">
             </a>
             <nav class="navbar">
                 <ul class="nav-links">
@@ -33,6 +32,17 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li class="mobile-only"><a href="login.html">Login</a></li>
                     <li class="mobile-only"><a href="register.html">Register</a></li>
+                    <li class="mobile-only">
+                        <div class="mobile-contact">
+                            <h3>Contact Info</h3>
+                            <p>Phone</p>
+                            <a href="tel:+917010782745">+91 7010782745</a>
+                            <p>Email</p>
+                            <a href="mailto:info@stackly.com">info@stackly.com</a>
+                            <p>Location</p>
+                            <a href="#">Stackly, Salem</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <div class="nav-buttons">
@@ -50,14 +60,42 @@
     </header>
 
     <!-- INNER PAGE HERO -->
-    <section class="section-padding" style="padding-top: 150px; background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.05), transparent 30%);">
-        <div class="container">
-            <div class="section-title reveal">
-                <span>Our Heritage</span>
-                <h2>Architecting Sustainable Utilities</h2>
-                <p>Learn how Aethera grew from a silicon valley lab prototype to a global leader in high-availability green grid management.</p>
+    <section class="inner-hero">
+        <div class="container inner-hero-grid">
+            <div class="inner-hero-content reveal active">
+                <div class="hero-badge"><i class="fa-solid fa-seedling" style="color: var(--accent-emerald); margin-right: 6px;"></i> Our Heritage</div>
+                <h1>Architecting Sustainable <span>Microgrids</span></h1>
+                <p>Learn how Aethera grew from a Silicon Valley laboratory prototype to a global leader in high-availability green grid engineering and decentralized utility systems.</p>
             </div>
-            
+            <div class="inner-hero-image float-animation reveal reveal-delay-2 active">
+                <svg viewBox="0 0 400 300" style="width: 100%; height: auto; max-width: 320px;" fill="none">
+                    <circle cx="200" cy="150" r="90" stroke="rgba(16, 185, 129, 0.15)" stroke-width="2" stroke-dasharray="6 4"></circle>
+                    <circle cx="200" cy="150" r="120" stroke="rgba(6, 182, 212, 0.1)" stroke-width="1.5"></circle>
+                    <circle cx="200" cy="150" r="30" fill="rgba(16, 185, 129, 0.1)" stroke="var(--accent-emerald)" stroke-width="2"></circle>
+                    
+                    <!-- Small satellite icons -->
+                    <circle cx="110" cy="90" r="16" fill="rgba(6, 182, 212, 0.1)" stroke="var(--accent-cyan)" stroke-width="1.5"></circle>
+                    <circle cx="290" cy="90" r="16" fill="rgba(245, 158, 11, 0.1)" stroke="var(--accent-gold)" stroke-width="1.5"></circle>
+                    <circle cx="200" cy="260" r="16" fill="rgba(16, 185, 129, 0.1)" stroke="var(--accent-emerald)" stroke-width="1.5"></circle>
+                    
+                    <!-- Connective lines -->
+                    <line x1="200" y1="120" x2="200" y2="90" stroke="var(--glass-border)" stroke-width="2"></line>
+                    <line x1="178" y1="130" x2="122" y2="102" stroke="var(--glass-border)" stroke-width="2"></line>
+                    <line x1="222" y1="130" x2="278" y2="102" stroke="var(--glass-border)" stroke-width="2"></line>
+                    <line x1="200" y1="180" x2="200" y2="244" stroke="var(--glass-border)" stroke-width="2"></line>
+                    
+                    <text x="200" y="155" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle" font-family="'Outfit', sans-serif">GRID</text>
+                    <text x="110" y="95" fill="var(--accent-cyan)" font-size="12" font-weight="bold" text-anchor="middle" font-family="'Outfit', sans-serif">WND</text>
+                    <text x="290" y="95" fill="var(--accent-gold)" font-size="12" font-weight="bold" text-anchor="middle" font-family="'Outfit', sans-serif">SOL</text>
+                    <text x="200" y="265" fill="var(--accent-emerald)" font-size="12" font-weight="bold" text-anchor="middle" font-family="'Outfit', sans-serif">BAT</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+    
+    <!-- MISSION SECTION -->
+    <section class="section-padding">
+        <div class="container">
             <div class="about-grid">
                 <div class="reveal">
                     <h3 style="font-size: 28px; font-weight: 800; margin-bottom: 20px; color: #fff;">Our Mission</h3>
@@ -143,14 +181,13 @@
         <div class="container footer-grid">
             <div class="footer-info">
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
-                    <span class="logo-text">Aethera</span>
+                    <img src="images/logo.png" alt="Stackly Logo" class="logo-img">
                 </a>
                 <p>Architecting high-availability green utility networks and smart clean grids worldwide.</p>
                 <div class="social-links">
-                    <a href="#" aria-label="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Follow us on YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="404.html" aria-label="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404.html" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="404.html" aria-label="Follow us on YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -190,7 +227,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=1.1"></script>
-    <script src="js/pages.js?v=1.1"></script>
+    <script src="js/main.js?v=2.4"></script>
+    <script src="js/pages.js?v=2.4"></script>
 </body>
 </html>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aethera Services. Residential, Commercial, and Utility solar-wind installs plus solar savings calculator.">
     <title>Aethera Energy | Services & Calculator</title>
-    <link rel="stylesheet" href="css/main.css?v=1.1">
-    <link rel="stylesheet" href="css/pages.css?v=1.1">
+    <link rel="stylesheet" href="css/main.css?v=2.4">
+    <link rel="stylesheet" href="css/pages.css?v=2.4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -15,16 +15,34 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo-link">
-                <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
-                <span class="logo-text">Aethera</span>
+                <img src="images/logo.png" alt="Stackly Logo" class="logo-img">
             </a>
             <nav class="navbar">
                 <ul class="nav-links">
+                    <li class="mobile-only">
+                        <div class="mobile-search">
+                            <input type="text" placeholder="Search solutions...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li class="mobile-only"><a href="login.html">Login</a></li>
+                    <li class="mobile-only"><a href="register.html">Register</a></li>
+                    <li class="mobile-only">
+                        <div class="mobile-contact">
+                            <h3>Contact Info</h3>
+                            <p>Phone</p>
+                            <a href="tel:+917010782745">+91 7010782745</a>
+                            <p>Email</p>
+                            <a href="mailto:info@stackly.com">info@stackly.com</a>
+                            <p>Location</p>
+                            <a href="#">Stackly, Salem</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <div class="nav-buttons">
@@ -42,13 +60,37 @@
     </header>
 
     <!-- SERVICES OVERVIEW -->
-    <section class="section-padding" style="padding-top: 150px;">
-        <div class="container">
-            <div class="section-title reveal">
-                <span>Deployments Catalog</span>
-                <h2>Clean Grid Capabilities</h2>
-                <p>We manage all aspects of design, hardware supply, structural installation, utility approvals, and continuous microgrid telemetry optimization.</p>
+    <section class="inner-hero">
+        <div class="container inner-hero-grid">
+            <div class="inner-hero-content reveal active">
+                <div class="hero-badge"><i class="fa-solid fa-gears" style="color: var(--accent-emerald); margin-right: 6px;"></i> Deployments Catalog</div>
+                <h1>Clean Grid <span>Capabilities</span></h1>
+                <p>We manage all aspects of engineering, structural installation, battery storage integration, and microgrid telemetry optimization to deliver independent, grid-tied clean power configurations.</p>
             </div>
+            <div class="inner-hero-image float-animation reveal reveal-delay-2 active">
+                <svg viewBox="0 0 400 300" style="width: 100%; height: auto; max-width: 320px;" fill="none">
+                    <rect x="80" y="60" width="240" height="180" rx="15" stroke="rgba(16, 185, 129, 0.2)" stroke-width="2"></rect>
+                    <line x1="80" y1="120" x2="320" y2="120" stroke="var(--glass-border)"></line>
+                    <line x1="80" y1="180" x2="320" y2="180" stroke="var(--glass-border)"></line>
+                    
+                    <circle cx="130" cy="90" r="15" stroke="var(--accent-cyan)" stroke-width="2"></circle>
+                    <line x1="130" y1="90" x2="140" y2="80" stroke="var(--accent-cyan)" stroke-width="2" stroke-linecap="round"></line>
+                    <circle cx="270" cy="90" r="15" stroke="var(--accent-gold)" stroke-width="2"></line>
+                    <line x1="270" y1="90" x2="260" y2="80" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round"></line>
+                    
+                    <rect x="110" y="140" width="180" height="24" rx="4" fill="rgba(16, 185, 129, 0.1)" stroke="var(--accent-emerald)" stroke-width="1.5"></rect>
+                    <text x="200" y="156" fill="var(--accent-emerald)" font-size="12" font-weight="bold" text-anchor="middle" font-family="'Outfit', sans-serif">TELEMETRY SYNCED</text>
+                    
+                    <circle cx="120" cy="210" r="8" fill="var(--accent-emerald)"></circle>
+                    <line x1="140" y1="210" x2="290" y2="210" stroke="rgba(255,255,255,0.1)" stroke-width="4" stroke-linecap="round"></line>
+                    <line x1="140" y1="210" x2="250" y2="210" stroke="var(--accent-cyan)" stroke-width="4" stroke-linecap="round"></line>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
 
             <div class="services-grid">
                 <!-- Card 1 -->
@@ -56,14 +98,14 @@
                     <div class="service-icon"><i class="fa-solid fa-house-chimney-window"></i></div>
                     <h3>Residential Microgrids</h3>
                     <p>Rooftop solar integrated with home battery cells (e.g. Lithium Storage units). Keep your home powered off-grid during storms or utility blackouts.</p>
-                    <a href="solutions.html" class="service-link">View Sizing Guide <i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="#calculator" class="service-link">View Sizing Calculator <i class="fa-solid fa-arrow-right-long"></i></a>
                 </div>
                 <!-- Card 2 -->
                 <div class="service-card glass-card reveal reveal-delay-1">
                     <div class="service-icon"><i class="fa-solid fa-building-user"></i></div>
                     <h3>Commercial Arrays</h3>
                     <p>High-yield solar carports and factory warehouse roof panels designed to offset peak manufacturing electricity demands and cut tax burdens.</p>
-                    <a href="solutions.html" class="service-link">View Industrial Guide <i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="contact.html" class="service-link">View Industrial Guide <i class="fa-solid fa-arrow-right-long"></i></a>
                 </div>
                 <!-- Card 3 -->
                 <div class="service-card glass-card reveal reveal-delay-2">
@@ -139,14 +181,13 @@
         <div class="container footer-grid">
             <div class="footer-info">
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo.svg" alt="Aethera Logo" class="logo-svg">
-                    <span class="logo-text">Aethera</span>
+                    <img src="images/logo.png" alt="Stackly Logo" class="logo-img">
                 </a>
                 <p>Architecting high-availability green utility networks and smart clean grids worldwide.</p>
                 <div class="social-links">
-                    <a href="#" aria-label="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Follow us on YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="404.html" aria-label="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404.html" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="404.html" aria-label="Follow us on YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -186,7 +227,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=1.1"></script>
-    <script src="js/pages.js?v=1.1"></script>
+    <script src="js/main.js?v=2.4"></script>
+    <script src="js/pages.js?v=2.4"></script>
 </body>
 </html>
