@@ -69,7 +69,8 @@
             </header>
 
             <!-- INNER MAIN CONTENT -->
-            <main class="dash-content-inner" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: flex-start;">
+            <main class="dash-content-inner">
+                <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: flex-start;">
                 <!-- Catalog List -->
                 <div class="table-card glass-card">
                     <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 24px; color: #fff;">Ecosystem Offerings</h3>
@@ -136,6 +137,59 @@
 
                         <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; height: 50px;">Publish Service Offering <i class="fa-solid fa-cloud-arrow-up" style="margin-left: 6px;"></i></button>
                     </form>
+                </div>
+                </div>
+
+                <!-- Contract Distribution & Utilization Metrics -->
+                <div class="dash-charts-grid" style="margin-top: 24px;">
+                    <div class="chart-card glass-card">
+                        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 20px; color: #fff;">Ecosystem Popularity Rate</h3>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 14px; color: var(--text-desc);">Residential Solar PV</span>
+                                <span style="font-size: 14px; font-weight: 700; color: var(--accent-emerald);">62% (High demand)</span>
+                            </div>
+                            <div style="width: 100%; height: 4px; background: var(--bg-tertiary); border-radius: 2px; overflow: hidden;">
+                                <div style="width: 62%; height: 100%; background: var(--accent-emerald);"></div>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                                <span style="font-size: 14px; color: var(--text-desc);">Lithium Battery Packs</span>
+                                <span style="font-size: 14px; font-weight: 700; color: var(--accent-cyan);">28% (Steady growth)</span>
+                            </div>
+                            <div style="width: 100%; height: 4px; background: var(--bg-tertiary); border-radius: 2px; overflow: hidden;">
+                                <div style="width: 28%; height: 100%; background: var(--accent-cyan);"></div>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                                <span style="font-size: 14px; color: var(--text-desc);">Municipal Smart Grid routing</span>
+                                <span style="font-size: 14px; font-weight: 700; color: var(--accent-gold);">10% (Specialized)</span>
+                            </div>
+                            <div style="width: 100%; height: 4px; background: var(--bg-tertiary); border-radius: 2px; overflow: hidden;">
+                                <div style="width: 10%; height: 100%; background: var(--accent-gold);"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-card glass-card">
+                        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 20px; color: #fff;">Operational Capacity Offset</h3>
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: rgba(255,255,255,0.02); border-radius: var(--border-radius-sm);">
+                                <div>
+                                    <span style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Active Substation Load</span>
+                                    <h4 style="font-size: 20px; font-weight: 800; color: var(--accent-cyan); margin-top: 4px;">428.2 MW</h4>
+                                </div>
+                                <div style="font-size: 24px; color: var(--accent-cyan);"><i class="fa-solid fa-bolt"></i></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: rgba(255,255,255,0.02); border-radius: var(--border-radius-sm);">
+                                <div>
+                                    <span style="font-size: 12px; color: var(--text-muted); text-transform: uppercase;">Average Pricing Target</span>
+                                    <h4 style="font-size: 20px; font-weight: 800; color: var(--accent-emerald); margin-top: 4px;">$0.105 / kWh</h4>
+                                </div>
+                                <div style="font-size: 24px; color: var(--accent-emerald);"><i class="fa-solid fa-tags"></i></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
