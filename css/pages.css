@@ -1282,6 +1282,21 @@
     z-index: 10;
 }
 
+@media (max-width: 576px) {
+    .auth-page {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 30px 16px;
+    }
+    .auth-back-btn {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 24px;
+        align-self: flex-start;
+    }
+}
+
 /* ==========================================================================
    404 ERROR PAGE SPECIFICS
    ========================================================================== */
