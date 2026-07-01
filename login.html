@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aethera Login portal. Access your user or admin energy monitoring dashboard.">
     <title>Aethera | Login</title>
-    <link rel="stylesheet" href="css/main.css?v=2.7">
-    <link rel="stylesheet" href="css/pages.css?v=2.7">
+    <link rel="stylesheet" href="css/main.css?v=2.8">
+    <link rel="stylesheet" href="css/pages.css?v=2.8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body style="background-color: var(--bg-primary);">
@@ -25,6 +25,7 @@
             </div>
 
             <form id="loginForm">
+                <div id="errorMsg" style="color: #ff5555; font-size: 14px; font-weight: 500; margin-bottom: 20px; text-align: center; display: none; padding: 10px 14px; border-radius: 8px; background: rgba(255, 85, 85, 0.1); border: 1px solid rgba(255, 85, 85, 0.25); line-height: 1.5;"></div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" required placeholder="Email Address">
@@ -64,7 +65,7 @@
         </div>
     </div>
 
-    <script src="js/main.js?v=2.7"></script>
+    <script src="js/main.js?v=2.8"></script>
     <script>
         const password = document.getElementById("password");
         const togglePassword = document.getElementById("togglePassword");
@@ -84,11 +85,17 @@
         document.getElementById("loginForm").addEventListener("submit", function(e) {
             e.preventDefault();
             
+            const errorMsg = document.getElementById("errorMsg");
+            if (errorMsg) errorMsg.style.display = "none";
+            
             const passwordVal = password.value;
             // Password criteria: min 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special char
             const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+={}\[\]|\\:;\"<>,.?/~`-])[A-Za-z\d!@#$%^&*()_+={}\[\]|\\:;\"<>,.?/~`-]{8,}$/;
             if (!passwordRegex.test(passwordVal)) {
-                alert("Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, one number, and one special character.");
+                if (errorMsg) {
+                    errorMsg.innerText = "Password must contain at least 8 characters, including 1 uppercase, 1 lowercase, 1 number, and 1 special character.";
+                    errorMsg.style.display = "block";
+                }
                 return;
             }
 
