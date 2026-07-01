@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Register an account with Aethera Energy. Begin tracking your clean utility savings.">
     <title>Aethera | Create Account</title>
-    <link rel="stylesheet" href="css/main.css?v=2.4">
-    <link rel="stylesheet" href="css/pages.css?v=2.4">
+    <link rel="stylesheet" href="css/main.css?v=2.6">
+    <link rel="stylesheet" href="css/pages.css?v=2.6">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body style="background-color: var(--bg-primary);">
@@ -81,7 +81,7 @@
         </div>
     </div>
 
-    <script src="js/main.js?v=2.4"></script>
+    <script src="js/main.js?v=2.6"></script>
     <script>
         const password = document.getElementById("password");
         const confirmPassword = document.getElementById("confirmPassword");
@@ -114,8 +114,33 @@
             }
         });
 
+        // Real-time input filters
+        const nameInput = document.getElementById("name");
+        const mobileInput = document.getElementById("mobile");
+
+        if (nameInput) {
+            nameInput.addEventListener("input", (e) => {
+                // Remove digits and symbols (allow only letters and spaces)
+                e.target.value = e.target.value.replace(/[^A-Za-z\s]/g, "");
+            });
+        }
+
+        if (mobileInput) {
+            mobileInput.addEventListener("input", (e) => {
+                // Remove letters and symbols (allow only digits)
+                e.target.value = e.target.value.replace(/[^0-9]/g, "");
+            });
+        }
+
         document.getElementById('registerForm').addEventListener('submit', (e) => {
             e.preventDefault();
+            
+            const passwordVal = password.value;
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+={}\[\]|\\:;\"<>,.?/~`-])[A-Za-z\d!@#$%^&*()_+={}\[\]|\\:;\"<>,.?/~`-]{8,}$/;
+            if (!passwordRegex.test(passwordVal)) {
+                alert("Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, one number, and one special character.");
+                return;
+            }
             
             if (password.value !== confirmPassword.value) {
                 alert('Passwords do not match.');
