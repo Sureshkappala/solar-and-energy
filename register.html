@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Register an account with Aethera Energy. Begin tracking your clean utility savings.">
     <title>Aethera | Create Account</title>
-    <link rel="stylesheet" href="css/main.css?v=2.9">
-    <link rel="stylesheet" href="css/pages.css?v=2.9">
+    <link rel="stylesheet" href="css/main.css?v=3.0">
+    <link rel="stylesheet" href="css/pages.css?v=3.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body style="background-color: var(--bg-primary);">
@@ -50,20 +50,20 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-box">
+                        <input type="password" id="confirmPassword" required placeholder="Confirm Password">
+                        <i class="fa-solid fa-eye" id="toggleConfirm"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="role">Select Role</label>
                     <select id="role" required style="width: 100%; padding: 14px 18px; border-radius: var(--border-radius-sm); border: 1px solid var(--glass-border); background: var(--bg-tertiary); color: var(--text-main); outline: none; transition: border-color var(--transition-fast); cursor: pointer;">
                         <option value="">Select Role</option>
                         <option value="admin">Admin</option>
                         <option value="user">User</option>
                     </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <div class="password-box">
-                        <input type="password" id="confirmPassword" required placeholder="Confirm Password">
-                        <i class="fa-solid fa-eye" id="toggleConfirm"></i>
-                    </div>
                 </div>
 
                 <div class="form-group" style="margin-bottom: 30px;">
@@ -82,7 +82,7 @@
         </div>
     </div>
 
-    <script src="js/main.js?v=2.9"></script>
+    <script src="js/main.js?v=3.0"></script>
     <script>
         const password = document.getElementById("password");
         const confirmPassword = document.getElementById("confirmPassword");
