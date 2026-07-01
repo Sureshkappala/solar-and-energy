@@ -1,3 +1,45 @@
+// ==========================================
+// CUSTOM PREMIUM ALERT MODAL OVERRIDE
+// ==========================================
+window.alert = function(message) {
+    // Create elements
+    const overlay = document.createElement('div');
+    overlay.className = 'custom-alert-overlay';
+    
+    overlay.innerHTML = `
+        <div class="custom-alert-box">
+            <div class="custom-alert-icon">
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div class="custom-alert-message">${message}</div>
+            <button class="custom-alert-btn">OK</button>
+        </div>
+    `;
+    
+    document.body.appendChild(overlay);
+    
+    // Trigger fade-in
+    setTimeout(() => {
+        overlay.classList.add('active');
+    }, 10);
+    
+    // Focus button
+    const btn = overlay.querySelector('.custom-alert-btn');
+    btn.focus();
+    
+    const closeAlert = () => {
+        overlay.classList.remove('active');
+        setTimeout(() => {
+            overlay.remove();
+        }, 200);
+    };
+    
+    btn.addEventListener('click', closeAlert);
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeAlert();
+    });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // STICKY HEADER & ACTIVE NAV LINK HIGHLIGHT
